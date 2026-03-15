@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         direction: 'vertical',
         gestureDirection: 'vertical',
         smooth: true,
-        smoothTouch: false,
+        smoothTouch: false, // Touch devices pe native scroll chalega
     });
 
     function raf(time) {
@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorRing = document.querySelector('.cursor-ring');
     
-    // Only activate custom cursor on desktop (fine pointers)
+    // Sirf desktop (fine pointers) par custom cursor chalega
     if (cursorDot && cursorRing && window.matchMedia("(pointer: fine)").matches) {
         window.addEventListener('mousemove', (e) => {
             gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1 });
             gsap.to(cursorRing, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" });
         });
 
-        // Add hover state for interactive elements
+        // Hover state for links aur buttons
         const interactives = document.querySelectorAll('a, button, .magnetic, input[type="range"]');
         interactives.forEach(el => {
             el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
                 
-                // Pull element slightly towards the mouse
+                // Element ko mouse ki taraf thoda pull karna
                 gsap.to(el, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: "power2.out" });
             });
             
             el.addEventListener('mouseleave', () => {
-                // Snap back to original position
+                // Wapas original jagah par snap karna
                 gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.3)" });
             });
         });
@@ -107,10 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (isActive) {
             mobileMenu.classList.remove('active');
-            lenis.start(); // Restore scrolling
+            lenis.start(); // Menu close hone par scroll wapas chalu
         } else {
             mobileMenu.classList.add('active');
-            lenis.stop(); // Lock background scrolling
+            lenis.stop(); // Menu open hone par background scroll lock
         }
     };
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 7. BEFORE & AFTER SLIDER
+    // 7. BEFORE & AFTER SLIDER (Fixed Webkit Support)
     // ==========================================
     const baSlider = document.getElementById('ba-slider');
     const baAfterImg = document.getElementById('ba-after-img');
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (baSlider && baAfterImg && baHandle) {
         baSlider.addEventListener('input', (e) => {
             const value = e.target.value;
-            // Fixed: Added Webkit support for Safari/iOS
+            // Safari aur Chrome dono ke liye clip-path update
             baAfterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
             baAfterImg.style.webkitClipPath = `inset(0 ${100 - value}% 0 0)`;
             baHandle.style.left = `${value}%`;
@@ -144,14 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
         
-        // Sync Lenis with GSAP ScrollTrigger
+        // Lenis aur ScrollTrigger ko sync karna taaki animations smooth rahein
         lenis.on('scroll', ScrollTrigger.update);
         gsap.ticker.add((time) => {
           lenis.raf(time * 1000);
         });
         gsap.ticker.lagSmoothing(0);
 
-        // --- Preloader Sequence ---
+        // --- Cinematic Preloader Sequence ---
         const preloaderTl = gsap.timeline({
             onComplete: () => {
                 document.body.classList.remove('loading');
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    .to('.preloader-text', { opacity: 1, duration: 0.5 }, "-=0.5")
                    .to('.preloader-content', { opacity: 0, y: -20, duration: 0.5, delay: 0.3 })
                    .to('#preloader', { yPercent: -100, duration: 1, ease: "power4.inOut" })
-                   // Hero Reveal directly after preloader
+                   // Hero Reveal exactly preloader ke baad
                    .from('.massive-title', { y: 100, opacity: 0, duration: 1.2, ease: "power4.out" }, "-=0.5")
                    .from('.hero-separator', { width: 0, duration: 0.8, ease: "power3.out" }, "-=0.8")
                    .from('.sub-title', { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    .from('.hero-cta-group .btn', { y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: "power3.out" }, "-=0.6")
                    .from('.site-header', { y: -100, opacity: 0, duration: 1, ease: "power3.out" }, "-=1");
 
-        // --- Standard Scroll Reveals ---
+        // --- Scroll Reveal Animations (Neeche aane par) ---
         const revealElements = document.querySelectorAll('.gs-reveal');
         revealElements.forEach((el) => {
             gsap.fromTo(el, 
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
             );
         });
 
-        // --- Parallax Effects ---
+        // --- Subtle Parallax Effects ---
         if (document.getElementById('hero-bg-parallax')) {
             gsap.to('#hero-bg-parallax', {
                 yPercent: 30,
@@ -217,8 +217,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     } else {
-        // Fallback if GSAP fails to load
+        // Fallback agar internet ki wajah se GSAP load na ho
         document.body.classList.remove('loading');
-        document.getElementById('preloader').style.display = 'none';
+        const preloader = document.getElementById('preloader');
+        if(preloader) preloader.style.display = 'none';
     }
 });
