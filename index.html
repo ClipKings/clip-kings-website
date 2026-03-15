@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Clip Kings Barber Shop | Best Fade & Men's Haircut in Thornhill</title>
+    <meta name="description" content="Thornhill's premier luxury barber shop. Experience masterful fades, precision cuts, hot towel shaves, and an elite grooming experience. Book your appointment today.">
+    <meta name="keywords" content="barber shop in Thornhill, best fade barber Thornhill, men's haircut Thornhill, luxury barber, beard trim, hot towel shave, master barbers">
+    <meta name="author" content="Clip Kings Barber Shop">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050505">
+    
+    <meta property="og:title" content="Clip Kings Barber Shop | Premium Grooming in Thornhill">
+    <meta property="og:description" content="Masterful fades, beard sculpting, and an elite grooming experience. Elevate your style with Thornhill's master barbers.">
+    <meta property="og:image" content="assets/images/og-image-share.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clipkingsbarbershop.ca/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Clip Kings Barber Shop",
+      "image": "https://clipkingsbarbershop.ca/assets/images/gallery-interior.jpg",
+      "@id": "https://clipkingsbarbershop.ca/",
+      "url": "https://clipkingsbarbershop.ca/",
+      "telephone": "+19057071969",
+      "priceRange": "$$$",
+      "description": "Luxury barber shop in Thornhill offering premium haircuts, hot towel shaves, and beard grooming.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "370 Steeles Ave W #105",
+        "addressLocality": "Thornhill",
+        "addressRegion": "ON",
+        "postalCode": "L4J 6X1",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.7915359,
+        "longitude": -79.4316901
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/clipkingsbarbershop/"
+      ]
+    }
+    </script>
+</head>
+<body class="loading">
+
+    <div class="noise-overlay"></div>
+
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <h2 class="font-display text-gold preloader-logo">CLIP KINGS</h2>
+            <div class="preloader-line-wrapper">
+                <div class="preloader-line"></div>
+            </div>
+            <span class="preloader-text font-accent">The Art of Grooming</span>
+        </div>
+    </div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header id="header" class="site-header" role="banner">
+        <div class="header-inner container-fluid">
+            <a href="#home" class="logo font-display text-gold magnetic" aria-label="Home">CLIP KINGS</a>
+            
+            <nav class="main-nav" role="navigation">
+                <a href="#services" class="magnetic">Services</a>
+                <a href="#transformations" class="magnetic">Transformations</a>
+                <a href="#about" class="magnetic">Why Us</a>
+                <a href="#gallery" class="magnetic">Atmosphere</a>
+                <a href="#team" class="magnetic">Masters</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+19057071969" class="header-phone magnetic">(905) 707-1969</a>
+                <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-primary magnetic">Book Now</a>
+                
+                <button class="menu-toggle magnetic" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button class="close-menu magnetic" id="close-menu-btn" aria-label="Close menu">×</button>
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav">
+                <a href="#services" class="mobile-link font-display">Services</a>
+                <a href="#transformations" class="mobile-link font-display">Transformations</a>
+                <a href="#about" class="mobile-link font-display">Why Us</a>
+                <a href="#gallery" class="mobile-link font-display">Atmosphere</a>
+                <a href="#team" class="mobile-link font-display">Masters</a>
+                <a href="#reviews" class="mobile-link font-display">Reviews</a>
+                <a href="#location" class="mobile-link font-display">Location</a>
+            </nav>
+            <div class="mobile-footer">
+                <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-primary w-100 mt-2">Book Appointment</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        
+        <section class="hero-section" id="home">
+            <div class="hero-parallax-bg" id="hero-bg-parallax">
+                <img src="assets/images/hero-bg.jpg" alt="Cinematic Barber Shop Interior" fetchpriority="high">
+                <div class="hero-vignette"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content gs-reveal-hero">
+                    <h1 class="font-display massive-title title-gradient">CLIP KINGS</h1>
+                    <div class="hero-separator"></div>
+                    <h2 class="font-accent sub-title text-gold">The Art of Grooming</h2>
+                    <p class="hero-description text-muted">Experience masterful fades, precision cuts, and an elite atmosphere. We are Thornhill's premier destination for the modern gentleman.</p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-primary magnetic">Book Appointment</a>
+                        <a href="#location" class="btn btn-outline magnetic">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator font-accent">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section class="trust-section gs-reveal">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-stat">
+                        <h3 class="font-display text-gold">4.9<span class="star">★</span></h3>
+                        <p class="font-accent text-muted">Google Rating</p>
+                    </div>
+                    <div class="trust-stat">
+                        <h3 class="font-display text-gold">10+</h3>
+                        <p class="font-accent text-muted">Years Experience</p>
+                    </div>
+                    <div class="trust-stat">
+                        <h3 class="font-display text-gold">3000+</h3>
+                        <p class="font-accent text-muted">Happy Clients</p>
+                    </div>
+                    <div class="trust-stat">
+                        <h3 class="font-display text-gold">100%</h3>
+                        <p class="font-accent text-muted">Sanitized Tools</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="transformations" class="section-padding bg-darker">
+            <div class="container text-center gs-reveal">
+                <span class="section-tag font-accent text-gold">The Proof</span>
+                <h2 class="section-title font-display">Real Transformations</h2>
+                <p class="text-muted mb-4 max-w-600 mx-auto">Drag the slider below to see the absolute precision and detail of our master barbers.</p>
+                
+                <div class="ba-wrapper magnetic">
+                    <div class="ba-container">
+                        <img src="assets/images/transformation-before.jpg" alt="Before Grooming" class="ba-image ba-before">
+                        <img src="assets/images/transformation-after.jpg" alt="After Grooming" class="ba-image ba-after" id="ba-after-img">
+                        <input type="range" min="0" max="100" value="50" class="ba-slider" id="ba-slider" aria-label="Drag to compare">
+                        <div class="ba-slider-line" id="ba-handle">
+                            <div class="ba-slider-button">↔</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-padding">
+            <div class="container gs-reveal">
+                <div class="section-header text-center">
+                    <span class="section-tag font-accent text-gold">Grooming Menu</span>
+                    <h2 class="section-title font-display">Elite Services</h2>
+                </div>
+
+                <div class="menu-grid">
+                    <div class="menu-column">
+                        <h3 class="menu-category font-accent text-gold">Haircuts & Styling</h3>
+                        
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Classic Haircut</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$25</span>
+                            </div>
+                            <p class="text-muted text-sm">30min precision cut and styling</p>
+                        </div>
+
+                        <div class="menu-item group highlight magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display text-gold">Haircut & Beard Trim Line Up</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$45</span>
+                            </div>
+                            <p class="text-muted text-sm">45min signature full grooming session</p>
+                        </div>
+
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Kids Haircut (15 & Under)</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$22</span>
+                            </div>
+                            <p class="text-muted text-sm">30min specialized session for the youth</p>
+                        </div>
+
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Buzz Cut / Senior Haircut</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$25</span>
+                            </div>
+                            <p class="text-muted text-sm">30min classic even cut</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-column">
+                        <h3 class="menu-category font-accent text-gold">Beard & Spa</h3>
+                        
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Beard Trim Line Up Blade</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$22</span>
+                            </div>
+                            <p class="text-muted text-sm">30min expert sculpting and razor finish</p>
+                        </div>
+
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Face Massage & Hot Towel Shave</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$35</span>
+                            </div>
+                            <p class="text-muted text-sm">30min deep relaxation and smooth shave</p>
+                        </div>
+
+                        <div class="menu-item group highlight magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display text-gold">Facial with Steamer & Mask</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$45</span>
+                            </div>
+                            <p class="text-muted text-sm">1h luxury skin treatment</p>
+                        </div>
+
+                        <div class="menu-item group magnetic">
+                            <div class="menu-item-header">
+                                <h4 class="font-display">Head Shave Blade</h4>
+                                <span class="menu-dots"></span>
+                                <span class="menu-price font-accent text-gold">$30</span>
+                            </div>
+                            <p class="text-muted text-sm">30min precision hot lather head shave</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-outline magnetic">View Full Menu & Book</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding bg-darker">
+            <div class="container gs-reveal">
+                <div class="section-header text-center">
+                    <span class="section-tag font-accent text-gold">The Clip Kings Standard</span>
+                    <h2 class="section-title font-display">Why Choose Us</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card group magnetic">
+                        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                        <h3 class="font-display text-xl mb-2">Master Craftsmanship</h3>
+                        <p class="text-muted text-sm">Our barbers are industry veterans, specializing in ultra-sharp fades, classic gentleman cuts, and detailed beard sculpting.</p>
+                    </div>
+                    <div class="feature-card group magnetic">
+                        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <h3 class="font-display text-xl mb-2">Uncompromised Hygiene</h3>
+                        <p class="text-muted text-sm">We use hospital-grade disinfectants. Every single tool is fully sanitized between clients to ensure your absolute safety.</p>
+                    </div>
+                    <div class="feature-card group magnetic">
+                        <svg class="feature-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg>
+                        <h3 class="font-display text-xl mb-2">Premium Vibe</h3>
+                        <p class="text-muted text-sm">From the moment you walk in, enjoy an elite, masculine atmosphere designed for relaxation, complete with premium music and seating.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section gs-reveal">
+            <div class="gallery-grid-layout">
+                <div class="gallery-img-wrap cinematic-hover magnetic">
+                    <img src="assets/images/gallery-interior.jpg" alt="Modern luxury barber shop interior">
+                </div>
+                <div class="gallery-img-wrap cinematic-hover magnetic">
+                    <img src="assets/images/gallery-tools.jpg" alt="Premium sanitized tools">
+                </div>
+                <div class="gallery-img-wrap cinematic-hover magnetic">
+                    <img src="assets/images/gallery-cutting.jpg" alt="Precision fade haircut">
+                </div>
+                <div class="gallery-img-wrap cinematic-hover magnetic">
+                    <img src="assets/images/gallery-shave.jpg" alt="Relaxing hot towel shave">
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section-padding bg-darker">
+            <div class="container gs-reveal">
+                <div class="section-header text-center">
+                    <span class="section-tag font-accent text-gold">The Specialists</span>
+                    <h2 class="section-title font-display">Meet The Kings</h2>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card group magnetic">
+                        <div class="team-image-wrapper overflow-hidden">
+                            <img src="assets/images/team-aj.jpg" alt="AJ - Founder and Master Barber" class="team-img transition-transform">
+                            <div class="team-overlay">
+                                <h3 class="font-display text-gold h2 mb-0">AJ</h3>
+                                <p class="font-accent text-white tracking-wide text-sm">MASTER BARBER / FOUNDER</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card group magnetic">
+                        <div class="team-image-wrapper overflow-hidden">
+                            <img src="assets/images/team-moe.jpg" alt="Moe - Master Barber" class="team-img transition-transform">
+                            <div class="team-overlay">
+                                <h3 class="font-display text-gold h2 mb-0">Moe</h3>
+                                <p class="font-accent text-white tracking-wide text-sm">MASTER BARBER</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section-padding">
+            <div class="container text-center gs-reveal">
+                <span class="section-tag font-accent text-gold">Client Testimonials</span>
+                <h2 class="section-title font-display">Word on the Street</h2>
+                
+                <div class="reviews-grid mt-4">
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"I couldn't be happier with the services offered by AJ. The haircut was not rushed and was completed with absolute precision. I will be using Clip Kings as my new barbershop moving forward."</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Ali Bangash</cite>
+                    </article>
+                    
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"Absolutely amazing barbershop! The service is always top-notch — everyone is friendly, professional, and welcoming. They even offer coffee and water. Highly recommend to anyone in Thornhill!"</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Mouhamed Alkiswani</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"AJ made me feel very welcome. Moe did an amazing job with my cut. He knows how to do a proper fade. I will definitely be coming back and recommending Clip King's to all my friends."</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Henry T.</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"First time getting my haircut from this place... Have zero about haircuts so I had to put my faith in AJ and he did not disappoint. Got a new clean look and very happy with the result. Studio was spacious and very clean."</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Roise Arvie</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"Great experience being my first at this new spot. Atmosphere is welcoming. Place is clean, modern and got cool vibe making u feel comfortable. My barber was pleasant and took the time to ask exactly what I wanted... Outcome of my look is awesome. 💯"</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Orlando Jr Bragais</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"I visited with my son to get his hair cut, and it was a wonderful experience from start to finish. AJ was incredibly kind and attentive. AJ is a true professional—he handled everything with such care... Highly recommended!"</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Jp Choi</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"I can’t thank AJ and Clip Kings Barbershop enough for the incredible haircut they gave my 16-year-old son... AJ was patient, kind, and truly understanding from the moment we walked in... This place isn’t just skilled with clippers; they treat every client like family."</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— George Tzimas</cite>
+                    </article>
+
+                    <article class="review-editorial magnetic">
+                        <div class="stars text-gold mb-2">★★★★★</div>
+                        <blockquote class="font-body text-muted mb-3 italic">"Went to this barbershop for the first time and had a great experience... AJ really took the time to understand what I wanted and paid attention to detail... Definitely felt comfortable even as a first-time customer."</blockquote>
+                        <cite class="font-accent text-white text-sm uppercase not-italic">— Anas Sokeechand</cite>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="https://www.google.com/maps/place/Clip+Kings+Barber+Shop/@43.7960533,-79.4361299,795m/data=!3m1!1e3!4m8!3m7!1s0x882b2de63386fb55:0x10a0451d7ea80de8!8m2!3d43.7960495!4d-79.433555!9m1!1b1!16s%2Fg%2F11xw95fgws?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-outline magnetic">Read All 300+ Google Reviews</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="location-section border-top-gold">
+            <div class="container-fluid p-0">
+                <div class="location-split">
+                    <div class="location-content gs-reveal section-padding">
+                        <span class="section-tag font-accent text-gold">Visit Us</span>
+                        <h2 class="font-display h1 mb-4">Location & Hours</h2>
+                        
+                        <div class="contact-details mb-4">
+                            <p class="text-lg mb-2 flex-align">
+                                <svg viewBox="0 0 24 24" class="icon-gold"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>370 Steeles Ave W #105<br>Thornhill, ON L4J 6X1</span>
+                            </p>
+                            <p class="text-lg mb-2 flex-align">
+                                <svg viewBox="0 0 24 24" class="icon-gold"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <a href="tel:+19057071969" class="hover-gold">(905) 707-1969</a>
+                            </p>
+                        </div>
+
+                        <div class="hours-grid mb-5 py-3">
+                            <div class="hours-row">
+                                <span class="font-accent text-muted uppercase">Mon - Fri</span>
+                                <span class="font-accent text-gold">9:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="font-accent text-muted uppercase">Saturday</span>
+                                <span class="font-accent text-gold">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="font-accent text-muted uppercase">Sunday</span>
+                                <span class="font-accent text-gold">10:00 AM - 4:00 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="https://www.google.com/maps/place/Clip+Kings+Barber+Shop/@43.7969242,-79.4342101,1124m/data=!3m1!1e3!4m6!3m5!1s0x882b2de63386fb55:0x10a0451d7ea80de8!8m2!3d43.7960495!4d-79.433555!16s%2Fg%2F11xw95fgws?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary magnetic">Get Directions</a>
+                            <a href="tel:+19057071969" class="btn btn-outline magnetic">Call Shop</a>
+                        </div>
+                    </div>
+                    
+                    <div class="location-map magnetic">
+                        <iframe src="https://maps.google.com/maps?q=Clip%20Kings%20Barber%20Shop,%20370%20Steeles%20Ave%20W%20%23105,%20Thornhill,%20ON&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Google Map location of Clip Kings" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta gs-reveal text-center">
+            <div class="cta-bg" id="cta-bg-parallax"></div>
+            <div class="container relative z-10">
+                <h2 class="font-display h1 mb-3 text-white">Ready for Your Best Look?</h2>
+                <p class="text-muted text-lg max-w-700 mx-auto mb-5">Walk-ins are welcome, but appointments are highly recommended to secure your spot with our Master Barbers. Elevate your confidence today.</p>
+                <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-primary btn-large magnetic">Book Your Appointment Now</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="mobile-floating-cta">
+        <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="btn btn-primary w-100 font-accent tracking-wide">BOOK APPOINTMENT</a>
+    </div>
+
+    <footer class="site-footer py-5 border-top-muted text-center" role="contentinfo">
+        <div class="container">
+            <h2 class="font-display text-gold h2 mb-2">CLIP KINGS</h2>
+            <p class="font-accent text-muted uppercase tracking-wider text-sm mb-4">Thornhill's Premier Grooming Destination.</p>
+            
+            <div class="social-icons mb-4">
+                <a href="https://www.instagram.com/clipkingsbarbershop/" target="_blank" rel="noopener" class="magnetic social-btn" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://booksy.com/en-ca/24439_clip-kings-barber-shop_barbershop_990795_thornhill" target="_blank" rel="noopener" class="magnetic social-btn" aria-label="Booksy">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </a>
+            </div>
+            
+            <div class="copyright text-muted text-sm">
+                <p>© <span id="year"></span> Clip Kings Barber Shop. All rights reserved.</p>
+                <p class="mt-1">370 Steeles Ave W #105, Thornhill, ON L4J 6X1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>
