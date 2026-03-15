@@ -1,7 +1,7 @@
 /* ==========================================
    1. CSS VARIABLES & TOKENS
    ========================================== */
-   :root {
+:root {
     /* Cinematic Color Palette */
     --color-bg: #050505;
     --color-bg-darker: #020202;
@@ -434,7 +434,7 @@ ul { list-style: none; }
 .trust-stat .star { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-left: 5px; }
 
 /* ==========================================
-   10. TRANSFORMATIONS (Slider)
+   10. TRANSFORMATIONS (Slider) - FIXED
    ========================================== */
 .ba-wrapper {
     max-width: 900px;
@@ -449,12 +449,11 @@ ul { list-style: none; }
 
 .ba-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
-/* Fixed: Added Z-index and Webkit Clip Path */
 .ba-before { z-index: 1; }
 .ba-after { 
     z-index: 2; 
     clip-path: inset(0 50% 0 0); 
-    -webkit-clip-path: inset(0 50% 0 0); 
+    -webkit-clip-path: inset(0 50% 0 0); /* Safari Support */
 }
 
 .ba-slider {
