@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (baSlider && baAfterImg && baHandle) {
         baSlider.addEventListener('input', (e) => {
             const value = e.target.value;
-            // Update the clip-path of the top image
+            // Fixed: Added Webkit support for Safari/iOS
             baAfterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-            // Move the slider line/handle
+            baAfterImg.style.webkitClipPath = `inset(0 ${100 - value}% 0 0)`;
             baHandle.style.left = `${value}%`;
         });
     }
