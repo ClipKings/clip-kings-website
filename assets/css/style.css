@@ -448,7 +448,14 @@ ul { list-style: none; }
 .ba-container { position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; }
 
 .ba-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.ba-after { clip-path: inset(0 50% 0 0); }
+
+/* Fixed: Added Z-index and Webkit Clip Path */
+.ba-before { z-index: 1; }
+.ba-after { 
+    z-index: 2; 
+    clip-path: inset(0 50% 0 0); 
+    -webkit-clip-path: inset(0 50% 0 0); 
+}
 
 .ba-slider {
     position: absolute; inset: 0; width: 100%; height: 100%;
